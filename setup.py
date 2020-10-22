@@ -3,7 +3,7 @@ import setup_translate
 
 pkg = 'SystemPlugins.QuadPiP'
 setup (name = 'enigma2-plugin-systemplugins-quadpip',
-	version = '1.00',
+	version = '1.20',	# python 3
 	description = 'QuadPiP plugin for VU+ UHD receivers',
 	packages = [pkg],
 	package_dir = {pkg: 'plugin'},
