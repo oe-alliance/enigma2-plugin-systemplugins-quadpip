@@ -21,7 +21,6 @@ from Screens.ChoiceBox import ChoiceBox
 from Screens.HelpMenu import HelpableScreen
 import Screens.InfoBar
 from Screens.MessageBox import MessageBox
-from Screens.QuadPiP import QuadPiP
 from Screens.Screen import Screen
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 
