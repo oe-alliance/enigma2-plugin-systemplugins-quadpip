@@ -38,7 +38,7 @@ class QuadPipChannelEntry:
 	def __init__(self, name, idx, ch1, ch2, ch3, ch4):
 		self.name = name
 		self.idx = idx
-		self.channel = {"1" : ch1, "2" : ch2, "3" : ch1, "4" : ch1,}
+		self.channel = {"1": ch1, "2": ch2, "3": ch1, "4": ch1,}
 
 	def __str__(self):
 		return "idx : %d, name : %s, ch0 : %s, ch1 : %s, ch2 : %s, ch3 : %s"\

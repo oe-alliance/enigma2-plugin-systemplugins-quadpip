@@ -4,7 +4,7 @@ from Components.Language import language
 
 PLUGIN_NAME = "QuadPiP"
 PLUGIN_VERSION = "1.2"	# python 3
-PLUGIN_PATH = os.path.dirname( __file__ )
+PLUGIN_PATH = os.path.dirname(__file__)
 
 def localeInit():
 	os.environ["LANGUAGE"] = language.getLanguage()[:2]
