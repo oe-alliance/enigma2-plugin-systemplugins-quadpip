@@ -1,4 +1,5 @@
-import os, gettext
+import os
+import gettext
 from Components.Language import language
 
 PLUGIN_NAME = "QuadPiP"
