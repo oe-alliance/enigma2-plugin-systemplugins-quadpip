@@ -425,7 +425,7 @@ class QuadPiPChannelSelection(Screen, HelpableScreen):
 		dw = self.session.desktop.size().width()
 		dh = self.session.desktop.size().height()
 		pw, ph = {1080: ("center", "center"), 720: ("center", "center"), 576: ("center", "20%")}.get(dh, ("center", "center"))
-		(sw, sh) = {1080: (int/dw / 3, dh / 2)), 720: (int(dw / 2), int(dh / 1.5)), 576: (int(dw / 1.3), int(dh / 1.5))}.get(dh, (28, 24))
+		(sw, sh) = {1080: (int(dw / 3), int(dh / 2)), 720: (int(dw / 2), int(dh / 1.5)), 576: (int(dw / 1.3), int(dh / 1.5))}.get(dh, (28, 24))
 		button_margin = 5
 		button_h = 40
 		list_y = 40 + button_margin * 3
