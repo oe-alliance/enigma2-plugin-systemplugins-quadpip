@@ -7,23 +7,23 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-10 23:58+0300\n"
-"PO-Revision-Date: 2019-09-29 19:50+0200\n"
-"Last-Translator: Frenske <voorzitter@openpli.org>\n"
+"PO-Revision-Date: 2021-11-27 15:16+0100\n"
+"Last-Translator: Rob van der Does <RobvanderDoes@Gmail.com>\n"
 "Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: qpip.py:636
 msgid "  Menu key : Select quad channel"
-msgstr "Menu: Kies de vier zenders."
+msgstr " Menu: Kies de vier zenders"
 
 #: qpip.py:635
 msgid "  Red key : Show/Hide texts"
-msgstr "Rood: Toon /  Verberg tekst."
+msgstr " Rood: Toon /  Verberg tekst"
 
 #: qpip.py:534
 msgid " (current channel)"
@@ -31,7 +31,7 @@ msgstr " (huidige keuze)"
 
 #: qpip.py:72
 msgid " <No Channel>"
-msgstr "<Geen zender>"
+msgstr " <Geen zender>"
 
 #: qpip.py:284
 msgid " <empty>"
