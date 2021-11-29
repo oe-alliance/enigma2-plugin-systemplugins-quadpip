@@ -247,6 +247,8 @@ class CreateQuadPipChannelEntry(ChannelSelectionBase):
 		self.defaultEntryName = defaultEntryName
 		self["textChannels"] = Label(" ")
 		self["description"] = Label(" ")
+		if "key_menu" in self:
+			self["key_menu"].text = ""
 
 		self.currList = None
 
