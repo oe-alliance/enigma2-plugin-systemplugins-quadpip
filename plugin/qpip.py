@@ -281,10 +281,18 @@ class CreateQuadPipChannelEntry(ChannelSelectionBase):
 			self.updateEntryName()
 
 	def updateDescription(self):
+		info_key = _("INFO key")
+		try: # just in case rc_model is not available
+			from Components.RcModel import rc_model
+			if rc_model.getRcFolder() in ("vu", "vu2", "vu3", "vu4"): # remote control uses EPG as INFO button
+				info_key = _("EPG key")
+		except:
+			pass
+		
 		if self.currList == "channelList":
-			desc = _("EPG key : Switch to quad PiP entry\nOk key : Add to new entry\nPVR key : Input channel name\nExit key : Finish channel edit")
+			desc = _("%s : Switch to quad PiP entry\nOk key : Add to new entry\nPVR key : Input channel name\nExit key : Finish channel edit") % info_key
 		else:
-			desc = _("EPG key : Switch to channel list\nOk key : Remove selected channel\nPVR key : Input channel name\nExit key : Finish channel edit")
+			desc = _("%s : Switch to channel list\nOk key : Remove selected channel\nPVR key : Input channel name\nExit key : Finish channel edit") % info_key
 		self["description"].setText(desc)
 
 	def prepareChannels(self):
