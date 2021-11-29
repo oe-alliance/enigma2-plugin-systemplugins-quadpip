@@ -41,26 +41,34 @@ msgid "Choice where to put \"%s\""
 msgstr "Назначение номера для \"%s\""
 
 msgid ""
-"EPG key : Switch to channel list\n"
+"%s : Switch to channel list\n"
 "Ok key : Remove selected channel\n"
 "PVR key : Input channel name\n"
 "Exit key : Finish channel edit"
 msgstr ""
-"Кнопка EPG: переключить на список каналов\n"
+"%s: переключить на список каналов\n"
 "Кнопка Ok: удалить выбранный канал\n"
 "Кнопка PVR: ввод названия блока\n"
 "Кнопка Exit: закончить редактирование блока"
 
 msgid ""
-"EPG key : Switch to quad PiP entry\n"
+"%s : Switch to quad PiP entry\n"
 "Ok key : Add to new entry\n"
 "PVR key : Input channel name\n"
 "Exit key : Finish channel edit"
 msgstr ""
-"Кнопка EPG: переключить на блок(и) Quad PiP\n"
+"%s: переключить на блок(и) Quad PiP\n"
 "Кнопка Ok: добавить новый канал\n"
 "Кнопка PVR: ввод названия блока\n"
 "Кнопка Exit: закончить редактирование блока"
+
+#
+msgid "EPG key"
+msgstr "Кнопка EPG"
+
+#
+msgid "INFO key"
+msgstr "Кнопка INFO"
 
 msgid "Edit"
 msgstr "Редактировать"

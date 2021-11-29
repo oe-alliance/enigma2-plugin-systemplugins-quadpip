@@ -56,7 +56,7 @@ msgstr ""
 
 #: qpip.py:269
 msgid ""
-"EPG key : Switch to channel list\n"
+"%s : Switch to channel list\n"
 "Ok key : Remove selected channel\n"
 "PVR key : Input channel name\n"
 "Exit key : Finish channel edit"
@@ -64,10 +64,18 @@ msgstr ""
 
 #: qpip.py:267
 msgid ""
-"EPG key : Switch to quad PiP entry\n"
+"%s : Switch to quad PiP entry\n"
 "Ok key : Add to new entry\n"
 "PVR key : Input channel name\n"
 "Exit key : Finish channel edit"
+msgstr ""
+
+#
+msgid "EPG key"
+msgstr ""
+
+#
+msgid "INFO key"
 msgstr ""
 
 #: qpip.py:435

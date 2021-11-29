@@ -50,27 +50,35 @@ msgstr "Choix de l'endroit où mettre les \"%s\"."
 
 #: ../qpip.py:272
 msgid ""
-"EPG key : Switch to channel list\n"
+"%s : Switch to channel list\n"
 "Ok key : Remove selected channel\n"
 "PVR key : Input channel name\n"
 "Exit key : Finish channel edit"
 msgstr ""
-"Touche EPG : Passer à la liste des canaux\n"
+"%s : Passer à la liste des canaux\n"
 "Touche Ok : Supprimer le canal sélectionné\n"
 "Touche PVR : Nom du canal d'entrée\n"
 "Touche Quitter : Terminer l'édition des canaux"
 
 #: ../qpip.py:270
 msgid ""
-"EPG key : Switch to quad PiP entry\n"
+"%s : Switch to quad PiP entry\n"
 "Ok key : Add to new entry\n"
 "PVR key : Input channel name\n"
 "Exit key : Finish channel edit"
 msgstr ""
-"Touche EPG : Passer à l'entrée PiP quadruple.\n"
+"%s : Passer à l'entrée PiP quadruple.\n"
 "Touche Ok : Ajouter à une nouvelle entrée\n"
 "Touche PVR : Nom du canal d'entrée\n"
 "Touche Quitter : Terminer l'édition des canaux"
+
+#
+msgid "EPG key"
+msgstr "Touche EPG"
+
+#
+msgid "INFO key"
+msgstr "Touche INFO"
 
 #: ../qpip.py:438
 msgid "Edit"

@@ -15,7 +15,7 @@ msgstr ""
 
 #: qpip.py:636
 msgid "  Menu key : Select quad channel"
-msgstr "menu - výběr Quad seznamu"
+msgstr "menu - výber Quad seznamu"
 
 #: qpip.py:635
 msgid "  Red key : Show/Hide texts"
@@ -35,15 +35,15 @@ msgstr " <prázdný>"
 
 #: qpip.py:433
 msgid "Add"
-msgstr "Přidat"
+msgstr "Pridat"
 
 #: qpip.py:443
 msgid "Add New Quad Channel Entry"
-msgstr "Přidat nový Quad seznam"
+msgstr "Pridat nový Quad seznam"
 
 #: qpip.py:670
 msgid "Box or driver is not support Quad PiP."
-msgstr "Přijímač nebo ovladač nepodporují­ Quad PiP."
+msgstr "Prijímac nebo ovladac nepodporují­ Quad PiP."
 
 #: qpip.py:332
 #, python-format
@@ -52,27 +52,35 @@ msgstr "Vyberte, kam vložit \"%s\""
 
 #: qpip.py:269
 msgid ""
-"EPG key : Switch to channel list\n"
+"%s : Switch to channel list\n"
 "Ok key : Remove selected channel\n"
 "PVR key : Input channel name\n"
 "Exit key : Finish channel edit"
 msgstr ""
-"EPG - přepnout do programů\n"
+"%s - prepnout do programu\n"
 "OK - odstranit program\n"
-"PVR - přejmenovat Quad seznam\n"
-"Exit - ukončit úpravy"
+"PVR - prejmenovat Quad seznam\n"
+"Exit - ukoncit úpravy"
 
 #: qpip.py:267
 msgid ""
-"EPG key : Switch to quad PiP entry\n"
+"%s : Switch to quad PiP entry\n"
 "Ok key : Add to new entry\n"
 "PVR key : Input channel name\n"
 "Exit key : Finish channel edit"
 msgstr ""
-"EPG - přepnout do Quad seznamu\n"
-"OK - přidat program\n"
-"PVR - přejmenovat Quad seznam\n"
-"Exit - ukončit úpravy"
+"%s - prepnout do Quad seznamu\n"
+"OK - pridat program\n"
+"PVR - prejmenovat Quad seznam\n"
+"Exit - ukoncit úpravy"
+
+#
+msgid "EPG key"
+msgstr "EPG"
+
+#
+msgid "INFO key"
+msgstr "INFO"
 
 #: qpip.py:435
 msgid "Edit"
@@ -88,11 +96,11 @@ msgstr "Povolit Quad PIP"
 
 #: qpip.py:451
 msgid "Exit Quad Channel Selection"
-msgstr "Zavřít výběr Quad seznamů"
+msgstr "Zavrít výber Quad seznamu"
 
 #: qpip.py:617
 msgid "Exit quad PiP"
-msgstr "Zavřít Quad PiP"
+msgstr "Zavrít Quad PiP"
 
 #: qpip.py:258
 msgid "Input channel name."
@@ -108,11 +116,11 @@ msgstr "Žádný seznam"
 
 #: qpip.py:626
 msgid "Prev quad PiP channel"
-msgstr "Předchozí­ Quad PiP seznam"
+msgstr "Predchozí­ Quad PiP seznam"
 
 #: qpip.py:404
 msgid "Quad PiP Channel Selection"
-msgstr "Quad PiP - výběr seznamu"
+msgstr "Quad PiP - výber seznamu"
 
 #: qpip.py:612
 msgid "Quad PiP Screen"
@@ -152,16 +160,16 @@ msgstr "Vybrat Quad seznamy"
 
 #: qpip.py:619 qpip.py:620 qpip.py:621 qpip.py:622
 msgid "Select channel audio"
-msgstr "Výběr zvuku programu"
+msgstr "Výber zvuku programu"
 
 #: qpip.py:623 qpip.py:624 qpip.py:625
 msgid "Show channel selection"
-msgstr "Zobrazit výběr seznamů"
+msgstr "Zobrazit výber seznamu"
 
 #: qpip.py:628
 msgid "Show/Hide focus bar"
-msgstr "Zobrazit/skrýt výběr"
+msgstr "Zobrazit/skrýt výber"
 
 #: qpip.py:618
 msgid "Zap focused channel on full screen"
-msgstr "Přepnout zvolený program na celou obrazovku"
+msgstr "Prepnout zvolený program na celou obrazovku"

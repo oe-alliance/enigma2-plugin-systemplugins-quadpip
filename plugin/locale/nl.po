@@ -56,24 +56,32 @@ msgstr "Kies waar je \"%s\" wilt plaatsen"
 
 #: qpip.py:269
 msgid ""
-"EPG key : Switch to channel list\n"
+"%s : Switch to channel list\n"
 "Ok key : Remove selected channel\n"
 "PVR key : Input channel name\n"
 "Exit key : Finish channel edit"
 msgstr ""
-"EPG toets : Ga naar de zenderlijst\n"
+"%s : Ga naar de zenderlijst\n"
 "Ok toets : Verwijder de gekozen zender\n"
 "PVR toets : Voer de zendernaam in\n"
 "Exit toets : Stop met het aanpassen van de zenders"
 
+#
+msgid "EPG key"
+msgstr "EPG toets"
+
+#
+msgid "INFO key"
+msgstr "INFO toets"
+
 #: qpip.py:267
 msgid ""
-"EPG key : Switch to quad PiP entry\n"
+"%s : Switch to quad PiP entry\n"
 "Ok key : Add to new entry\n"
 "PVR key : Input channel name\n"
 "Exit key : Finish channel edit"
 msgstr ""
-"EPG toets : Ga naar het QuadPiP kanaal\n"
+"%s : Ga naar het QuadPiP kanaal\n"
 "Ok toets : Voeg een zender toe\n"
 "PVR toets : Voer de zendernaam in\n"
 "Exit toets : Stop met het aanpassen van de zenders"
