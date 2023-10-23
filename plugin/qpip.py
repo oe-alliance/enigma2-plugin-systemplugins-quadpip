@@ -27,6 +27,12 @@ from Screens.MessageBox import MessageBox
 from Screens.Screen import Screen
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 
+streamrelay = True
+try:
+	from Screens.InfoBarGenerics import streamrelayChecker
+except ImportError:
+	streamrelay = False
+
 config.plugins.quadpip = ConfigSubsection()
 config.plugins.quadpip.lastchannel = ConfigNumber(default=1)
 
@@ -666,7 +672,7 @@ class QuadPipScreen(Screen, FocusShowHide, HelpableScreen):
 		self["ch2"] = Label(_(" "))
 		self["ch3"] = Label(_(" "))
 		self["ch4"] = Label(_(" "))
-		self["text1"] = Label(_("  Red key : Show/Hide texts"))
+		self["text1"] = Label(_("  Red key : Show/Hide channel name"))
 		self["text2"] = Label(_("  Menu key : Select quad channel"))
 		self["focus"] = Slider(-1, -1)
 
@@ -1029,6 +1035,8 @@ class QuadPiP(Screen):
 		else:
 			ref = service
 		if ref:
+			if streamrelay:
+				ref = streamrelayChecker(ref)
 			self.pipservice = eServiceCenter.getInstance().play(ref)
 			if self.pipservice and not self.pipservice.setTarget(self.decoderIdx):
 				self.setQpipMode(True, playAudio)
