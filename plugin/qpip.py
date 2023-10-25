@@ -8,11 +8,10 @@ import pickle
 
 from enigma import ePoint, eServiceCenter, eServiceReference, eSize, eTimer, getBestPlayableServiceReference
 from Components.ActionMap import ActionMap, HelpableActionMap
-from Components.Button import Button
 from Components.config import config, ConfigNumber, ConfigSubsection
 from Components.Label import Label
 from Components.MenuList import MenuList
-from Components.Pixmap import Pixmap, MovingPixmap
+from Components.Pixmap import Pixmap
 import Components.ServiceEventTracker
 from Components.Slider import Slider
 from Components.SystemInfo import SystemInfo
@@ -27,11 +26,34 @@ from Screens.MessageBox import MessageBox
 from Screens.Screen import Screen
 from Screens.VirtualKeyBoard import VirtualKeyBoard
 
-streamrelay = True
+streamRelay = False
 try:
 	from Screens.InfoBarGenerics import streamrelayChecker
+	streamRelay = True
 except ImportError:
-	streamrelay = False
+	try:
+		from Screens.InfoBarGenerics import streamrelay
+		streamrelayChecker = streamrelay.streamrelayChecker
+		streamRelay = True
+	except ImportError:
+		pass
+
+VU = False
+
+try:  # just in case rc_model is not available
+	from Components.RcModel import rc_model
+	VU = rc_model.getRcFolder() in ("vu", "vu2", "vu3", "vu4")  # remote control uses EPG as INFO button
+	print("[Quadpip] ViX Vu+ Rc", VU)		
+except ImportError:
+	pass
+
+try:
+	from Components.SystemInfo import BoxInfo
+	VU = BoxInfo.getItem("brand") == "vuplus"
+	print("[Quadpip] ATV BoxInfo Vu+ Rc", VU)	
+except ImportError:
+	pass
+
 
 config.plugins.quadpip = ConfigSubsection()
 config.plugins.quadpip.lastchannel = ConfigNumber(default=1)
@@ -130,7 +152,7 @@ class QuadPipChannelData:
 class QuadPipChannelList(QuadPipChannelData):
 	def __init__(self):
 		QuadPipChannelData.__init__(self)
-		self._curIdx = config.plugins.quadpip.lastchannel.value # starting from 1
+		self._curIdx = config.plugins.quadpip.lastchannel.value  # starting from 1
 		self.defaultEntryPreName = _("Quad PiP channel ")
 
 	def saveAll(self):
@@ -161,7 +183,7 @@ class QuadPipChannelList(QuadPipChannelData):
 
 	def removeChannel(self, _channel):
 		if self.getIdx() == _channel.getIndex():
-			self.setIdx(0) # set invalid index
+			self.setIdx(0)  # set invalid index
 		self.PipChannelList.remove(_channel)
 
 	def sortPipChannelList(self):
@@ -289,14 +311,8 @@ class CreateQuadPipChannelEntry(ChannelSelectionBase):
 			self.updateEntryName()
 
 	def updateDescription(self):
-		info_key = _("INFO key")
-		try: # just in case rc_model is not available
-			from Components.RcModel import rc_model
-			if rc_model.getRcFolder() in ("vu", "vu2", "vu3", "vu4"): # remote control uses EPG as INFO button
-				info_key = _("EPG key")
-		except:
-			pass
-		
+		info_key = _("EPG key") if VU else _("INFO key")
+
 		if self.currList == "channelList":
 			desc = _("%s : Switch to quad PiP entry\nOk key : Add to new entry\nPVR key : Input channel name\nExit key : Finish channel edit") % info_key
 		else:
@@ -676,7 +692,7 @@ class QuadPipScreen(Screen, FocusShowHide, HelpableScreen):
 		self["text2"] = Label(_("  Menu key : Select quad channel"))
 		self["focus"] = Slider(-1, -1)
 
-		self.currentPosition = 1 # 1~4
+		self.currentPosition = 1  # 1~4
 		self.updatePositionList()
 
 		self.skin = QuadPipScreen.skin % (self.session.desktop.size().width(), self.session.desktop.size().height(),
@@ -736,7 +752,6 @@ class QuadPipScreen(Screen, FocusShowHide, HelpableScreen):
 		self.oldService = self.session.nav.getCurrentlyPlayingServiceOrGroup()
 		self.newService = None
 		self.session.nav.stopService()
-
 
 		if SystemInfo.get("LcdLiveTV", False):
 			self.disableLcdLiveTV()
@@ -996,7 +1011,7 @@ class QuadPipScreen(Screen, FocusShowHide, HelpableScreen):
 
 
 class QuadPiP(Screen):
-	def __init__(self, session, decoderIdx = 1, pos = None):
+	def __init__(self, session, decoderIdx=1, pos=None):
 		Screen.__init__(self, session)
 		self["video"] = VideoWindow(decoderIdx, 720, 576)
 		self.currentService = None
@@ -1035,7 +1050,7 @@ class QuadPiP(Screen):
 		else:
 			ref = service
 		if ref:
-			if streamrelay:
+			if streamRelay:
 				ref = streamrelayChecker(ref)
 			self.pipservice = eServiceCenter.getInstance().play(ref)
 			if self.pipservice and not self.pipservice.setTarget(self.decoderIdx):
