@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-10 23:58+0300\n"
+"PO-Revision-Date: 2023-10-25 16:03+0200\n"
+"Last-Translator: Masta2002\n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4\n"
+
+#: qpip.py:636
+msgid "  Menu key : Select quad channel"
+msgstr " Menütaste: Quad-Kanal auswählen"
+
+#: qpip.py:635
+msgid "  Red key : Show/Hide texts"
+msgstr " Rote Taste: Texte ein-/ausblenden"
+
+#: qpip.py:534
+msgid " (current channel)"
+msgstr " (aktueller Kanal)"
+
+#: qpip.py:72
+msgid " <No Channel>"
+msgstr " <Kein Kanal>"
+
+#: qpip.py:284
+msgid " <empty>"
+msgstr " <leer>"
+
+#: qpip.py:433
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: qpip.py:443
+msgid "Add New Quad Channel Entry"
+msgstr "Neuen Quad-Channel-Eintrag hinzufügen"
+
+#: qpip.py:670
+msgid "Box or driver is not support Quad PiP."
+msgstr "Box oder Treiber unterstützen Quad PiP nicht."
+
+#: qpip.py:332
+#, python-format
+msgid "Choice where to put \"%s\""
+msgstr "Auswahl, wo „%s“ abgelegt werden soll"
+
+#: qpip.py:269
+msgid ""
+"%s : Switch to channel list\n"
+"Ok key : Remove selected channel\n"
+"PVR key : Input channel name\n"
+"Exit key : Finish channel edit"
+msgstr ""
+"%s: Zur Senderliste wechseln\n"
+"Ok-Taste: Ausgewählten Kanal entfernen\n"
+"PVR-Taste: Geben Sie den Kanalnamen ein\n"
+"Exit-Taste: Kanalbearbeitung beenden"
+
+#: qpip.py:267
+msgid ""
+"%s : Switch to quad PiP entry\n"
+"Ok key : Add to new entry\n"
+"PVR key : Input channel name\n"
+"Exit key : Finish channel edit"
+msgstr ""
+"%s: Zum Quad-PiP-Eintrag wechseln\n"
+"Ok-Taste: Zum neuen Eintrag hinzufügen\n"
+"PVR-Taste: Geben Sie den Kanalnamen ein\n"
+"Exit-Taste: Kanalbearbeitung beenden"
+
+#
+msgid "EPG key"
+msgstr "EPG-Taste"
+
+#
+msgid "INFO key"
+msgstr "INFO-Taste"
+
+#: qpip.py:435
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: qpip.py:445
+msgid "Edit Quad Channel Entry"
+msgstr "Quad-Kanal Eintrag bearbeiten"
+
+#: plugin.py:17
+msgid "Enable Quad PiP"
+msgstr "Aktiviere Quad PiP"
+
+#: qpip.py:451
+msgid "Exit Quad Channel Selection"
+msgstr "Beende Quad-Kanal Auswahl"
+
+#: qpip.py:617
+msgid "Exit quad PiP"
+msgstr "Beende Quad PiP"
+
+#: qpip.py:258
+msgid "Input channel name."
+msgstr "Eingabekanal Name."
+
+#: qpip.py:627
+msgid "Next quad PiP channel"
+msgstr "Nächster Quad PiP Kanal"
+
+#: qpip.py:936
+msgid "No channel"
+msgstr "Kein Kanal"
+
+#: qpip.py:626
+msgid "Prev quad PiP channel"
+msgstr "Vorheriger Quad PiP Kanal"
+
+#: qpip.py:404
+msgid "Quad PiP Channel Selection"
+msgstr "Quad PiP Kanalauswahl"
+
+#: qpip.py:612
+msgid "Quad PiP Screen"
+msgstr "Quad PiP Bildschirm"
+
+#: qpip.py:116
+msgid "Quad PiP channel "
+msgstr "Quad PiP Kanal "
+
+#: qpip.py:667
+msgid "Quad PiP is not available."
+msgstr "Quad PiP ist nich verfügbar."
+
+#: plugin.py:18
+msgid "Quad Picture in Picture"
+msgstr "Quad Bild im Bild"
+
+#: qpip.py:483
+msgid "Really delete this entry?"
+msgstr "Diesen Eintrag wirklich löschen?"
+
+#: qpip.py:434
+msgid "Remove"
+msgstr "Entfernen"
+
+#: qpip.py:444
+msgid "Remove Quad Channel Entry"
+msgstr "Entferne Quad-Kanal eintag"
+
+#: qpip.py:432
+msgid "Select"
+msgstr "Auswählen"
+
+#: qpip.py:442 qpip.py:450
+msgid "Select Quad Channels"
+msgstr "Wähle Quad Kanäle aus"
+
+#: qpip.py:619 qpip.py:620 qpip.py:621 qpip.py:622
+msgid "Select channel audio"
+msgstr "Wähle Audio Kanal aus"
+
+#: qpip.py:623 qpip.py:624 qpip.py:625
+msgid "Show channel selection"
+msgstr "Senderauswahl anzeigen"
+
+#: qpip.py:628
+msgid "Show/Hide focus bar"
+msgstr "Fokusleiste ein-/ausblenden"
+
+#: qpip.py:618
+msgid "Zap focused channel on full screen"
+msgstr "Zappe-fokussierten Kanal im Vollbildmodus"
