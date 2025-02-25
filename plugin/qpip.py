@@ -39,6 +39,7 @@ except ImportError:
 		pass
 
 VU = False
+Distro = False
 
 try:  # just in case rc_model is not available
 	from Components.RcModel import rc_model
@@ -50,6 +51,7 @@ except ImportError:
 try:
 	from Components.SystemInfo import BoxInfo
 	VU = BoxInfo.getItem("brand") == "vuplus"
+	Distro = BoxInfo.getItem("displaydistro", "").lower()
 	print("[Quadpip] ATV BoxInfo Vu+ Rc", VU)	
 except ImportError:
 	pass
@@ -1051,7 +1053,10 @@ class QuadPiP(Screen):
 			ref = service
 		if ref:
 			if streamRelay:
-				ref = streamrelayChecker(ref)
+				if Distro and Distro in ("openvix", "openbh"):
+					ref, is_streamrelay = streamrelayChecker(ref)
+				else:
+ 					ref = streamrelayChecker(ref)
 			self.pipservice = eServiceCenter.getInstance().play(ref)
 			if self.pipservice and not self.pipservice.setTarget(self.decoderIdx):
 				self.setQpipMode(True, playAudio)
