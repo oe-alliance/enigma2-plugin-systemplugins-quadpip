@@ -1013,6 +1013,7 @@ class QuadPipScreen(Screen, FocusShowHide, HelpableScreen):
 
 
 class QuadPiP(Screen):
+	playServiceExtensions = []
 	def __init__(self, session, decoderIdx=1, pos=None):
 		Screen.__init__(self, session)
 		self["video"] = VideoWindow(decoderIdx, 720, 576)
@@ -1055,6 +1056,8 @@ class QuadPiP(Screen):
 			if streamRelay:
 				if Distro and Distro in ("openvix", "openbh"):
 					ref, is_streamrelay = streamrelayChecker(ref)
+					for f in QuadPiP.playServiceExtensions:
+						ref, is_handled = f(self, ref)
 				else:
  					ref = streamrelayChecker(ref)
 			self.pipservice = eServiceCenter.getInstance().play(ref)
