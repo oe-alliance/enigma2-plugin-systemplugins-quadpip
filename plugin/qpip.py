@@ -1054,7 +1054,7 @@ class QuadPiP(Screen):
 			ref = service
 		if ref:
 			if streamRelay:
-				if Distro and Distro in ("openvix", "openbh"):
+				if Distro and Distro in ("openvix", "openbh", "teamblue"):
 					ref, is_streamrelay = streamrelayChecker(ref)
 					for f in QuadPiP.playServiceExtensions:
 						ref, is_handled = f(self, ref)
