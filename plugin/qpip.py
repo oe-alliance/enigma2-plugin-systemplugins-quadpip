@@ -134,7 +134,7 @@ class QuadPipChannelData:
 
 	def dataSave(self):
 		fd = open(self.pipChannelDataPath, "wb")
-		pickle.dump(self.PipChannelList, fd)
+		pickle.dump(self.PipChannelList, fd, protocol=5)
 		fd.close()
 
 	def dataLoad(self):
