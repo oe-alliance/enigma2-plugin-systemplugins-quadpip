@@ -38,6 +38,14 @@ except ImportError:
 	except ImportError:
 		pass
 
+def normalizeServiceReferenceResult(result):
+	# Some images return (service_reference, is_streamrelay) instead of only service_reference.
+	# eServiceCenter.play() requires the raw eServiceReference.
+	if isinstance(result, tuple):
+		return result[0] if result else None
+	return result
+
+
 VU = False
 Distro = False
 
@@ -73,7 +81,7 @@ class QuadPipChannelEntry:
 	def __init__(self, name, idx, ch1, ch2, ch3, ch4):
 		self.name = name
 		self.idx = idx
-		self.channel = {"1": ch1, "2": ch2, "3": ch1, "4": ch1, }
+		self.channel = {"1": ch1, "2": ch2, "3": ch3, "4": ch4, }
 
 	def __str__(self):
 		return "idx : %d, name : %s, ch0 : %s, ch1 : %s, ch2 : %s, ch3 : %s"\
@@ -1055,11 +1063,11 @@ class QuadPiP(Screen):
 		if ref:
 			if streamRelay:
 				if Distro and Distro in ("openvix", "openbh", "teamblue"):
-					ref, is_streamrelay = streamrelayChecker(ref)
+					ref = normalizeServiceReferenceResult(streamrelayChecker(ref))
 					for f in QuadPiP.playServiceExtensions:
-						ref, is_handled = f(self, ref)
+						ref = normalizeServiceReferenceResult(f(self, ref))
 				else:
- 					ref = streamrelayChecker(ref)
+					ref = normalizeServiceReferenceResult(streamrelayChecker(ref))
 			self.pipservice = eServiceCenter.getInstance().play(ref)
 			if self.pipservice and not self.pipservice.setTarget(self.decoderIdx):
 				self.setQpipMode(True, playAudio)
